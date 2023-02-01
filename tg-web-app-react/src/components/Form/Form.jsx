@@ -26,10 +26,6 @@ const Form = () => {
     }, [onSendData])
 
     useEffect(() => {
-        tg.WebApp.onEvent('mainButtonClicked',onSendData)
-    },[])
-
-    useEffect(() => {
         if (!country || !city) {
             tg.MainButton.hide();
         } else {
