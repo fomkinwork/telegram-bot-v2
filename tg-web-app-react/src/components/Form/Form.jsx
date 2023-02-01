@@ -12,11 +12,11 @@ const Form = () => {
     const onSendData = useCallback(() => {
         const data = {
             country,
-            street,
+            city,
             subject
         }
         tg.sendData(JSON.stringify(data));
-    }, [country, street, subject])
+    }, [country, city, subject])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
